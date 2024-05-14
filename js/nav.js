@@ -3,22 +3,22 @@ function nav(){
     navContainer.innerHTML = `
                 <ul class="nav">
                 <li>
-                    <img src="../front/img/logo3BG.png" alt="" class="img-logo-header">
+                    <img src="../img/logo3BG.png" alt="" class="img-logo-header">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" aria-current="page" href="/">Home</a>
+                    <a class="nav-link text-danger" aria-current="page" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="../front/pages/userPage.html">Your Service</a>
+                    <a class="nav-link text-danger" href="../pages/userPage.html">Your Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="../front/pages/aboutUs.html">About Us</a>
+                    <a class="nav-link text-danger" href="../pages/aboutUs.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-whit" aria-disabled="true" href="../front/pages/admin.html">Admin</a>
+                    <a class="nav-link text-whit" aria-disabled="true" href="../pages/admin.html">Admin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-whit" aria-disabled="true" href="../front/pages/ambulance.html">Ambulance</a>
+                    <a class="nav-link text-whit" aria-disabled="true" href="../pages/ambulance.html">Ambulance</a>
                 </li>
             </ul>
             <ul class="nav">
