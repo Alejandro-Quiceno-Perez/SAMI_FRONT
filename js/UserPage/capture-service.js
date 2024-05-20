@@ -1,18 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const requestButton = document.getElementById("btn-request");
-
+    const requestContainer = document.querySelector(".request-container");
+    const mapContainer = document.querySelector(".map-container");
+    const serviceContainer = document.querySelector(".service-container");
+    const sectionMap = document.querySelector(".section-map");
     requestButton.addEventListener("click", function () {
-        const requestContainer = document.querySelector(".request-container");
-        const mapContainer = document.querySelector(".map-container");
-        const serviceContainer = document.querySelector(".service-container");
+
+
 
         // Oculta el contenedor de solicitud y muestra el mapa y el servicio al hacer clic en el botón de solicitud
-        requestContainer.style.display = "none";
+        requestContainer.classList = "d-none";
         mapContainer.style.display = "block";
         serviceContainer.style.display = "block";
+        sectionMap.style.display = "flex";
     });
 
-    const requestForm = document.querySelector('.request-container form');
+    const requestForm = document.querySelector('.container-form');
 
     requestForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -43,11 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         // Muestra el contenedor de servicio al enviar el formulario
-        serviceContainer.style.display = "block";
+        serviceContainer.style.display = "flex";
+        console.log("Imprime algo esta mierda");
 
         // Oculta el formulario de solicitud
         const requestContainer = document.querySelector(".request-container");
-        requestContainer.style.display = "none";
+        requestContainer.style.display = "block";
     });
 
     // Captura el botón de cancelar servicio
@@ -58,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             serviceContainer.style.display = "none";
             mapContainer.style.display = "none";
+            sectionMap.style.display = "none";
 
-            const requestContainer = document.querySelector(".request-container");
-            requestContainer.style.display = "block";
+            requestContainer.classList = "request-container w-75 d-flex justify-content-center align-items-center pt-5";
         }
     });
 });

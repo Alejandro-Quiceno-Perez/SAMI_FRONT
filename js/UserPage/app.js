@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setLanguage("en");
 
     // Agrega el evento click al botón de menú
-    document.getElementById("menuButton").addEventListener("click", toggleMenuSection);
+    document.getElementById("btn-request").addEventListener("click", toggleMenuSection);
 
     // Script para generar opciones de edad del 1 al 100, menos de 10 años y más de 100 años
     const ageSelect = document.getElementById("age");
@@ -79,4 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     more100age.value = ">100";
     more100age.textContent = "more than 100 years";
     ageSelect.appendChild(more100age);
+    
+
+    
 });
