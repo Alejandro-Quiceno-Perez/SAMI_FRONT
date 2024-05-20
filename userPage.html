@@ -22,34 +22,37 @@
                     <img src="./img/logo3BG.png" alt="" class="img-logo-header">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link text-danger" aria-current="page" href="index.html"data-key="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="userPage.html">Your Service</a>
+                    <a class="nav-link text-danger" href="userPage.html" data-key="service">Your Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="aboutUs.html">About Us</a>
+                    <a class="nav-link text-danger" href="aboutUs.html"data-key="about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Admin</a>
+                    <a class="nav-link disabled" aria-disabled="true" data-key="admin">Admin</a>
                 </li>
             </ul>
             <ul class="nav">
                 <li class="nav-item"><a href="" class="nav-link text-dark" data-bs-toggle="modal"
                         data-bs-target="#exampleModal"><i class="bi bi-person-circle">
                             Cuchumfulo</a></i></li>
-                <li class="nav-item d-flex me-5"><a href="" class="nav-link text-danger">ES</a><span
-                        class="nav-link text-danger">/</span><a href="" class="nav-link text-danger">EN</a></li>
+                            <li class="nav-item d-flex me-5">
+                                <a href="#" class="nav-link text-danger" data-lang="es" data-key="spanish">ES</a>
+                                <span class="nav-link text-danger">/</span>
+                                <a href="#" class="nav-link text-danger" data-lang="en" data-key="english">EN</a>
+                            </li>
                 <!-- <li class="nav-item"><a class="btn btn-danger" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">Profile</a></li> -->
                 <li class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        aria-expanded="false" data-key="account">
                         My account
                     </button>
                     <ul class="dropdown-menu dropdown-menu-white">
-                        <li><a class="dropdown-item" href="#">Update</a></li>
-                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                        <li><a class="dropdown-item" href="#"data-key="update_account">Update</a></li>
+                        <li><a class="dropdown-item" href="#" data-key="logout">Log out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -62,7 +65,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel" data-key="my_account">
                         My account
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -74,7 +77,7 @@
                     <p>Credit coins: xxxxxx</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"data-key="close">
                         Close
                     </button>
                 </div>
@@ -85,26 +88,26 @@
         <div class="request-container w-75 d-flex justify-content-center align-items-center pt-5">
             <form class="w-75 p-4 container-form">
                 <!-- name -->
-                <h3 class="mb-3">Service Panel</h3>
+                <h3 class="mb-3 language"data-key="service_panel">Service Panel</h3>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="name" placeholder="name@example.com">
-                    <label for="name">Full name</label>
+                    <label for="name"data-key="full_name">Full name</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                    <label for="email">Email</label>
+                    <label for="email"data-key="email">Email</label>
                 </div>
                 <div class="row ">
                     <div class="col">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="address" placeholder="name@example.com">
-                            <label for="address">Address</label>
+                            <label for="address"data-key="address">Address</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-floating mb-3">
                             <input type="number" class="form-control" id="phone" placeholder="name@example.com">
-                            <label for="phone">Phone</label>
+                            <label for="phone"data-key="phone">Phone</label>
                         </div>
                     </div>
                 </div>
@@ -112,15 +115,15 @@
                 <div class="row mb-3">
                     <div class="col">
                         <div class="form-group">
-                            <label for="age" class="form-label ps-1">Age</label>
+                            <label for="age" class="form-label ps-1"data-key="age">Age</label>
                             <select class="form-select align-middle" id="age">
-                                <option value="">Select</option>
+                                <option value=""data-key="select">Select</option>
                             </select>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1" class="form-label">Number of Patients</label>
+                            <label for="exampleFormControlSelect1" class="form-label" data-key="number?patients">Number of Patients</label>
                             <select class="form-select align-middle" id="patients" required>
                                 <option>1</option>
                             </select>
@@ -129,7 +132,7 @@
                     <div class="col">
                         <!-- Emergency Grade -->
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1" class="form-label">Emergency Grade</label>
+                            <label for="exampleFormControlSelect1" class="form-label" data-key="emergency_grade">Emergency Grade</label>
                             <select class="form-select align-middle" id="emergency" required>
                                 <option>1</option>
                                 <option>2</option>
@@ -143,9 +146,9 @@
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="emerg-description"
                         style="height: 80px"></textarea>
-                    <label for="emerg-description">Description of the Emergency</label>
+                    <label for="emerg-description" data-key="emergency_description">Description of the Emergency</label>
                 </div>
-                <button type="submit" class="btn btn-outline-success mt-3" id="btn-request">
+                <button type="submit" class="btn btn-outline-success mt-3" id="btn-request" data-key="request">
                     Request
                 </button>
             </form>
@@ -155,11 +158,14 @@
 
     <!-- map Zone -->
     <div class="map-container">
-        <script>
-            (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-                key: ".env.SAMI_APP_OPEN_API_KEY",
-            });
-        </script>
+        <iframe
+            width="450"
+            height="250"
+            frameborder="0" style="border:0"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS"
+            allowfullscreen>
+</iframe>
     </div>
     <!-- Service Information zone -->
     <div class="service-container position-relative"></div>
@@ -171,6 +177,7 @@
         crossorigin="anonymous"></script>
     <script src="./js/UserPage/app.js"></script>
     <script src="./js/UserPage/capture-service.js"></script>
+    <script src="./js/language.js"></script>
 </body>
 
 </html>

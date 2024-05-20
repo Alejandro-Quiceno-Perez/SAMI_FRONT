@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-
     const requestButton = document.getElementById("btn-request");
 
-
     requestButton.addEventListener("click", function () {
-
         const requestContainer = document.querySelector(".request-container");
         const mapContainer = document.querySelector(".map-container");
         const serviceContainer = document.querySelector(".service-container");
@@ -16,12 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
         serviceContainer.style.display = "block";
     });
 
-
-    const requestForm = document.querySelector('.request-container');
-
+    const requestForm = document.querySelector('.request-container form');
 
     requestForm.addEventListener('submit', function (event) {
-
         event.preventDefault();
 
         // Captura los valores de los campos del formulario
@@ -46,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Number of Patients: ${numberOfPatients}</p>
         <p>Emergency Degree: ${emergencyDegree}</p>
         <p>Description of the Emergency: ${emergencyDescription}</p>
-        <button type="button" class="btn btn-danger" id="cancelService">Cancel Service</button>
+        <button type="button" class="btn btn-danger" id="cancelService" data-key="cancel">Cancel Service</button>
         `;
 
         // Muestra el contenedor de servicio al enviar el formulario
@@ -60,13 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Captura el botón de cancelar servicio
     document.addEventListener('click', function (event) {
         if (event.target && event.target.id === 'cancelService') {
-
             const serviceContainer = document.querySelector(".service-container");
             const mapContainer = document.querySelector(".map-container");
 
             serviceContainer.style.display = "none";
             mapContainer.style.display = "none";
-
 
             const requestContainer = document.querySelector(".request-container");
             requestContainer.style.display = "block";
