@@ -23,7 +23,7 @@ function generateNavbar() {
         </li>
       </ul>
       <ul class="nav">
-        <li class="nav-item"><a href="" class="nav-link text-dark"><i class="bi bi-person-circle">Cuchumfulo</i></a></li>
+        <li class="nav-item"><a href="" class="nav-link text-dark"><i class="bi bi-person-circle"> User</i></a></li>
         <li class="nav-item d-flex me-5">
           <a href="" class="nav-link text-danger" data-lang="es" data-key="spanish">ES</a>
           <span class="nav-link text-danger" data-lang="en">/</span>
